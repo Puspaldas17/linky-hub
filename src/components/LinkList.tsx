@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Twitter, Github, Linkedin, Youtube, Mail, Globe } from "lucide-react";
 import SocialLink from "./SocialLink";
 
@@ -10,9 +11,9 @@ const links = [
   { href: "mailto:puspal1703@gmail.com", icon: Mail, label: "Email Me" },
 ];
 
-const LinkList = () => {
+const LinkList = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div ref={ref} className="flex flex-col gap-3 w-full">
       {links.map((link) => (
         <SocialLink
           key={link.label}
@@ -23,6 +24,8 @@ const LinkList = () => {
       ))}
     </div>
   );
-};
+});
+
+LinkList.displayName = "LinkList";
 
 export default LinkList;
