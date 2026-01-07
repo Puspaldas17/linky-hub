@@ -1,6 +1,6 @@
 import ProfileCard from "@/components/ProfileCard";
 import LinkList from "@/components/LinkList";
-import profileImage from "@/assets/profile-placeholder.jpg";
+import profileImage from "@/assets/profile-puspal.jpg";
 
 const Index = () => {
   return (
@@ -15,9 +15,9 @@ const Index = () => {
         <div className="glass rounded-3xl p-8 shadow-2xl border border-border/30 animate-scale-in">
           <div className="space-y-8">
             <ProfileCard
-              name="Alex Johnson"
-              username="alexjohnson"
-              bio="Creative developer & designer. Building beautiful things for the web. ✨"
+              name="Puspal Das"
+              username="puspaldas17"
+              bio="Developer & Creator. Building cool stuff on the web. 🚀"
               avatarUrl={profileImage}
             />
             
