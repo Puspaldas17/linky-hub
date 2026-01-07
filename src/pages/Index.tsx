@@ -26,12 +26,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        <footer className="text-center mt-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <p className="text-sm text-muted-foreground/70">
-            Made with ♥
-          </p>
-        </footer>
       </main>
     </div>
   );
