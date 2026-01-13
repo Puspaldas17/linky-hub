@@ -34,6 +34,7 @@ const Index = () => {
               username="puspaldas17"
               bio="Developer & Creator. Building cool stuff on the web. 🚀"
               avatarUrl={profileImage}
+              email="puspal@example.com"
             />
             
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>

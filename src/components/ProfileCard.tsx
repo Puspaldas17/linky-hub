@@ -1,13 +1,15 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import CopyEmailButton from "@/components/CopyEmailButton";
 
 interface ProfileCardProps {
   name: string;
   username: string;
   bio: string;
   avatarUrl: string;
+  email?: string;
 }
 
-const ProfileCard = ({ name, username, bio, avatarUrl }: ProfileCardProps) => {
+const ProfileCard = ({ name, username, bio, avatarUrl, email }: ProfileCardProps) => {
   return (
     <div className="flex flex-col items-center text-center space-y-4">
       <Avatar className="w-28 h-28 ring-4 ring-white/50 shadow-xl">
@@ -21,6 +23,7 @@ const ProfileCard = ({ name, username, bio, avatarUrl }: ProfileCardProps) => {
         <p className="text-muted-foreground text-sm">@{username}</p>
       </div>
       <p className="text-card-foreground/80 max-w-xs text-sm leading-relaxed">{bio}</p>
+      {email && <CopyEmailButton email={email} />}
     </div>
   );
 };
