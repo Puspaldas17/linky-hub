@@ -1,5 +1,6 @@
 import ProfileCard from "@/components/ProfileCard";
 import LinkList from "@/components/LinkList";
+import ScrollReveal from "@/components/ScrollReveal";
 import profileImage from "@/assets/profile-puspal.jpg";
 
 const Index = () => {
@@ -27,19 +28,21 @@ const Index = () => {
       </div>
 
       <main className="relative z-10 w-full max-w-md mx-auto py-12">
-        <div className="glass rounded-3xl p-8 shadow-2xl border border-border/30 animate-scale-in">
+        <div className="glass rounded-3xl p-8 shadow-2xl border border-border/30">
           <div className="space-y-8">
-            <ProfileCard
-              name="Puspal Das"
-              username="puspaldas17"
-              bio="Developer & Creator. Building cool stuff on the web. 🚀"
-              avatarUrl={profileImage}
-              email="puspal@example.com"
-            />
+            <ScrollReveal animation="scale" duration={600}>
+              <ProfileCard
+                name="Puspal Das"
+                username="puspaldas17"
+                bio="Developer & Creator. Building cool stuff on the web. 🚀"
+                avatarUrl={profileImage}
+                email="puspal@example.com"
+              />
+            </ScrollReveal>
             
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <ScrollReveal animation="fade-up" delay={200} duration={500}>
               <LinkList />
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </main>
